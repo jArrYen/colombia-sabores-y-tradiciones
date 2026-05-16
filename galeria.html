@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería | Colombia: Sabores y Tradiciones</title>
+
+    <link rel="stylesheet" href="css/galeria.css">
+</head>
+
+<body>
+
+    <header class="header-vibrant">
+        <div class="container header-flex">
+
+            <!--Logo principal del sitio web-->
+             <div class="logo-circle">
+                <img src="img/logo_circular_colombia.png" alt="Bandera de Colombia en forma circular">
+            </div>
+
+            <!--Botón para abrir los enlaces-->
+            <button id="abrir" class="abrir-menu" aria-label="Abrir menú">☰</button>
+            
+            <nav class="nav-menu"  id="nav" aria-label="Menú principal">
+                
+                <button id="cerrar" class="cerrar-menu" aria-label="Cerrar menú">X</button> 
+
+                    <ul>
+                        <li><a href="index.html"  data-section="header" data-value="inicio">Inicio</a></li>
+                        <li><a href="gastronomia.html" data-section="header" data-value="gastronomia">Gastronomía</a></li>
+                        <li><a href="festivales.html" data-section="header" data-value="festivales">Festivales</a></li>
+                        <li><a href="galeria.html" class="active" data-section="header" data-value="galeria">Galería</a></li>
+                    </ul>
+
+            </nav>
+            
+            <div class="header-tools">
+                
+                <!--Selector de idiomas-->
+                <div class="lang-box">
+                    <label for="idioma"class="visually-hidden">Idioma:</label>
+                    <select id="idioma">
+                        <option aria-label="Idioma español" value="es">ES</option>
+                        <option aria-label="Idioma inglés" value="en">EN</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!--Contenido principal-->
+    <main>
+
+        <!--Introduccón-->
+        <section class="container galeria-intro">
+            <h1 data-section="galeria" data-value="galeriatitulo">Nuestra Riqueza en Imágenes</h1>
+            <p data-section="galeria" data-value="galeriatexto">Una recopilación visual de los sabores, colores y tradiciones que hacen única a nuestra tierra.</p>
+        </section>
+
+        <!--Galería-->
+        <section class="container">
+            <div class="galeria-grid">
+
+                <!--Imagen 1-->
+                <article class="galeria-item">
+                    <img src="img/Bandeja-paisa(2).jpg" alt="Bandeja Paisa con arroz blanco, chicharrón, huevo frito, chorizo, arepa asada, frijoles y aguacate" loading="lazy">
+                </article>
+
+                <!--Imagen 2-->
+                <article class="galeria-item">
+                    <img src="img/Festival-de-las-flores(4).jpg" alt="Campesino antioqueño rodeado de flores en la Feria de las Flores" loading="lazy">
+                </article>
+
+                <!--Imagen 3-->
+                <article class="galeria-item">
+                    <img src="img/Festival-de-las-flores(1).jpg" alt="Silleteros desfilando en la Feria de las Flores con arreglos florales coloridos" loading="lazy">
+                </article>
+
+                <!--Imagen 4-->
+                <article class="galeria-item">
+                    <img src="img/Carnaval-de-Barranquilla(3).jpg" alt="Comparsas del Carnaval de Barranquilla con trajes coloridos y música" loading="lazy">
+                </article>
+
+                <!--Imagen 5-->
+                <article class="galeria-item">
+                    <img src="img/Chontaduro-galeria.jpg" alt="Mujer del pacífico preparando chontaduro en un puesto comercial" loading="lazy">
+                </article>
+
+                <!--Imagen 6-->
+                <article class="galeria-item">
+                    <img src="img/Carnal-Negros-y-Blancos.jpg" alt="Desfile del Carnaval de Negros y Blancos con carrozas y comparsas" loading="lazy" >
+                </article>
+
+                <!--Imagen 7-->
+                <article class="galeria-item">
+                    <img src="img/Sanchoco-de-gallina.jpg" alt="Sancocho de Gallina servido con arroz blanco, tajadas verdes y verduras" loading="lazy">
+                </article>
+
+                <!--Imagen 8-->
+                <article class="galeria-item">
+                    <img src="img/Semana-Santa-En-Medellín.jpg" alt="Procesión de Semana Santa con fieles y figuras religiosas en la calle" loading="lazy">
+                </article>
+
+                <!--Imagen 9-->
+                <article class="galeria-item">
+                    <img src="img/Changua.jpg" alt="Plato de changua con huevo, leche, cilantro y pan" loading="lazy">
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!--Franja separadora -->
+    
+    <div class="bandera-separator"></div>
+
+    <!--Parte final-->
+    <footer>
+        <div class="container">
+            <p data-section="footer" data-value="footertexto">&copy; 2026 Colombia: Sabores y Tradiciones</p>
+        </div>
+    </footer>
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/idioma.js"></script>
+
+</body>
+</html>

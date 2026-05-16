@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festividades | Colombia: Sabores y Tradiciones</title>
+    <link rel="stylesheet" href="css/festivales.css">
+</head>
+<body>
+    
+    <header class="header-vibrant">
+        <div class="container header-flex">
+
+           <div class="logo-circle">
+                <img src="img/logo_circular_colombia.png" alt="Bandera de Colombia en forma circular">
+            </div>
+
+            <!--Botón para abrir los enlaces-->
+            <button id="abrir" class="abrir-menu" aria-label="Abrir menú">☰</button>
+            
+            <nav class="nav-menu"  id="nav" aria-label="Menú principal">
+                
+                <button id="cerrar" class="cerrar-menu" aria-label="Cerrar menú">X</button> 
+
+                    <ul>
+                        <li><a href="index.html"  data-section="header" data-value="inicio">Inicio</a></li>
+                        <li><a href="gastronomia.html" data-section="header" data-value="gastronomia">Gastronomía</a></li>
+                        <li><a href="festivales.html" class="active" data-section="header" data-value="festivales">Festivales</a></li>
+                        <li><a href="galeria.html" data-section="header" data-value="galeria">Galería</a></li>
+                    </ul>
+
+            </nav>
+
+            <div class="header-tools">
+                
+              <!--Selector de idiomas-->
+                <div class="lang-box">
+                    <label for="idioma"class="visually-hidden">Idioma:</label>
+                    <select id="idioma">
+                        <option aria-label="Idioma español" value="es">ES</option>
+                        <option aria-label="Idioma inglés" value="en">EN</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--Contenido principal-->
+    <main>
+
+        <!--Hero-->
+        <section id="hero">
+            <div class="hero-imagen">
+                <div class="hero-texto">
+                    <h1 data-section="festivales" data-value="festivalherotitulo">Cultura y Tradiciones</h1>
+                    <p data-section="festivales" data-value="festivalherotexto">Descubre las fiestas que llenan de alegría cada rincón del país.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--Contenido sobre los festivales de Colombia-->
+        <section class="container regiones-container">
+            
+            <!--Carnaval de Barranquilla-->
+            <article class="plato-region">
+
+                <div class="plato-imagen">
+                    <img src="img/Carnaval-de-Barranquilla(1).jpg" alt="Comparsas del Carnaval de Barranquilla con trajes coloridos bailando en desfile." loading="lazy">
+                </div>
+
+                <!--Información sobre el carnaval de Barranquilla-->
+               
+                <div class="plato-info">
+                    <h3 data-section="evento1" data-value="titulo">Carnaval de Barranquilla</h3>
+                    <p data-section="evento1" data-value="texto1">Es un festival colorido y folclórico representativo del Atlántico colombiano. El Carnaval de Barranquilla celebra sus expresiones emblemáticas como su calidez y diversidad. Durante este festival, las personas escogen a su reina por barrios o sectores, incluyendo a su rey momo y reyes infantiles.</p> 
+                    <p data-section="evento1" data-value="texto2">Asimismo, se realizan varios desfiles con carrozas y danzas típicas como la marimonda, el garabato, los monocucos, entre otros. También se hacen encuentros de letanías que son homenajes a la tradición oral de Colombia.</p>
+                </div>
+
+            </article>
+            
+            <!--Feria de las Flores-->
+            <article class="plato-region inversa">
+
+                <div class="plato-imagen">
+                    <img src="img/Festival-de-las-flores(3).jpg" alt="Personas en la Feria de las Flores cargando arreglos florales tradicionales." loading="lazy">
+                </div>
+
+                <!--Información sobre la Feria de las Flores-->
+                <div class="plato-info">
+                    <h3 data-section="evento2" data-value="titulo">Feria de las Flores</h3>
+                    <p data-section="evento2" data-value="texto1">Ubicado en Medellín, el Festival de las Flores ha dado revuelo en los habitantes colombianos y turistas nacionales e internacionales donde se puede observar trabajos manuales de flores frescas, cuyos colores vibrantes generan encanto en los espectadores.</p>
+                    <p data-section="evento2" data-value="texto2">Este festival ayuda a muchos floricultores, permitiendo reconocer su arduo y creativo trabajo. Su tiempo de duración es de diez días.</p>
+                </div>
+
+            </article>
+            
+            <!--Carnaval de Negros y Blancos-->
+            <article class="plato-region">
+
+                <div class="plato-imagen">
+                    <img src="img/Carnal-Negros-y-Blancos(2).jpg" alt="Personas en el Carnaval de Negros y Blancos con rostros pintados y trajes coloridos en desfile." loading="lazy">
+                </div>
+                
+                <!--Información sobre el Carnaval de Negros y Blancos-->
+                
+                <div class="plato-info">
+                    <h3 data-section="evento3" data-value="titulo">Carnaval de Negros y Blancos</h3>
+                    <p data-section="evento3" data-value="texto1">Es una festividad tradicional que representa la diversidad cultural de Colombia. Celebra la unión entre culturas indígenas, afrodescendientes y mestizas, promoviendo valores de igualdad y convivencia. Durante el carnaval se realizan desfiles con carrozas, comparsas y disfraces llenos de color y creatividad.</p>
+                    <p data-section="evento3" data-value="texto2">Además, simboliza la resistencia cultural y la preservación de las tradiciones de las comunidades a lo largo del tiempo. Cada elemento del carnaval está lleno de significado histórico y cultural. Por ello, esta celebración fortalece la identidad y el orgullo de las comunidades que la mantienen viva.</p>
+                </div>
+
+            </article>
+            
+            <!--Festival de la Leyenda Vallenata-->
+            <article class="plato-region inversa">
+                
+                <div class="plato-imagen">
+                    <img src="img/Festival-de-la-leyenda-vallenata.jpg" alt="Acordeonero interpretando música vallenata en el Festival de la Leyenda Vallenata." loading="lazy">
+                </div>
+                    
+                <!--Información sobre el Festival de la Leyenda Vallenata-->
+                <div class="plato-info">
+                    <h3 data-section="evento4" data-value="titulo">Festival de la Leyenda Vallenata</h3>
+                    <p data-section="evento4" data-value="texto1">También conocido como el Festival de Vallenato, es una fiesta folclórica de Valledupar que reúne a los más reconocidos intérpretes y compositores vallenatos. Su finalidad es mantener el legado de la música vallenata, incentivando a los niños y jóvenes a conocer sus instrumentos musicales como el acordeón, la guacharaca, la percusión y caja, así como sus aires tradicionales como el merengue, el paseo, el son y la puya.</p>
+                </div>
+            </article>
+            
+        </section>
+
+    </main>
+
+    <!--Franja tricolor-->
+    <div class="bandera-separator"></div>
+
+    <footer>
+        <div class="container">
+            <p data-section="footer" data-value="footertexto">&copy; 2026 Colombia: Sabores y Tradiciones</p>
+        </div>
+    </footer>
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/idioma.js"></script>
+
+</body>
+</html>
