@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colombia: Sabores y Tradiciones</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    
+    <!--Header-->
+    <header class="header-vibrant">
+        <div class="container header-flex">
+            
+            <div class="logo-circle">
+                <img src="img/logo_circular_colombia.png" alt="Bandera de Colombia en forma circular">
+            </div>
+
+          <!--Botón para abrir los enlaces-->
+            <button id="abrir" class="abrir-menu" aria-label="Abrir menú">☰</button>
+            
+            <nav class="nav-menu"  id="nav" aria-label="Menú principal">
+                
+                <button id="cerrar" class="cerrar-menu" aria-label="Cerrar menú">X</button> 
+
+                    <ul>
+                        <li><a href="index1.html" class="active" data-section="header" data-value="inicio">Inicio</a></li>
+                        <li><a href="gastronomia.html" data-section="header" data-value="gastronomia">Gastronomía</a></li>
+                        <li><a href="festivales.html" data-section="header" data-value="festivales">Festivales</a></li>
+                        <li><a href="galeria.html" data-section="header" data-value="galeria">Galería</a></li>
+                    </ul>
+
+            </nav>
+
+            <div class="header-tools">
+                
+                <!--Selector de idiomas-->
+                <div class="lang-box">
+                    <label for="idioma"class="visually-hidden">Idioma:</label>
+                    <select id="idioma">
+                        <option aria-label="Idioma español" value="es">ES</option>
+                        <option aria-label="Idioma inglés" value="en">EN</option>
+                    </select>
+                </div>
+                
+            </div>
+            
+        </div>
+    </header>
+    
+    <!--Contenido principal-->
+    
+    <main>
+
+            <!--Mensaje de personalización-->
+            <h2 id="mensaje"></h2> 
+            
+            <!--Imagen principal (Hero)-->
+            <section id="hero">
+
+                    <div class="hero-imagen">
+
+                        <div class="slider">
+
+                            <div class="slide">
+                                <img src="img/Imagen_hero1.jpg" alt="">
+                            </div>
+
+                            <div class="slide">
+                                <img src="img/Imagen_hero2.jpg" alt="">
+                            </div>
+
+                            <div class="slide">
+                                <img src="img/Imagen_hero3.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <!--Flechas izquierda y derecha del slider-->
+                        <button class="prev" onclick="moveSlide(-1)">⇦</button> <!--Flecha izquierda-->
+                        <button class="next" onclick="moveSlide(1)">⇨</button> <!--Flecha derecha-->
+
+                        <div class="hero-texto">
+                            <h1 data-section="hero" data-value="herotitulo">¡Colombia: Sabores y Tradiciones!</h1>
+                            <p data-section="hero" data-value="herotexto">Autor:Mariana Gómez</p>
+                        </div>
+                    </div>
+
+            </section>
+
+        <!--Bienvenida-->
+        <section id="bienvenida">
+            <div class="container">
+                <div class="intro-texto">
+
+                    <h2 data-section="bienvenida" data-value="bienvenidatitulo">Introducción</h2>
+                    <p data-section="bienvenida" data-value="bienvenidatexto1">¡Bienvenidos a Colombia: Sabores y tradiciones!</p>
+                    <p data-section="bienvenida" data-value="bienvenidatexto2">Un sitio web donde encontrarás platos típicos y celebraciones culturales.</p>
+                </div>
+            </div>
+
+            <div class="bandera-separator"></div>
+        </section>
+        
+        <!--Sección "¡Explora un poco más!"-->
+        <section id="explorar">
+            <div class="container">
+                <h2 class="titulo-seccion" data-section="explorar" data-value="explorartitulo">¡Explora un poco más!</h2>
+                
+                <div class="grid-franjas">
+
+                    <!--Tarjeta de Gastronomía-->
+
+                    <article class="franja-card">
+                        <a href="gastronomia.html">
+                            <div class="franja-bg" style="background-image: url(img/collage-comida-colombiana.png) ;" loading="lazy">
+                                <div class="overlay">
+                                    <h3 data-section="tarjetas" data-value="tarjetagastronomia">Gastronomía</h3>
+                                    <span class="btn-fake" data-section="explorar" data-value="btn">+ Leer más</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <!--Sección Festivales-->
+                    <article class="franja-card">
+                        <a href="festivales.html">
+                            <div class="franja-bg" style="background-image: url(img/pareja-colombiana-bailando_\ \(1\).jpeg);" loading="lazy">
+                                <div class="overlay">
+                                    <h3 data-section="tarjetas" data-value="tarjetafestival">Festivales</h3>
+                                    <span class="btn-fake" data-section="explorar" data-value="btn">+ Leer más</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!--Sección Galería-->
+                    <article class="franja-card">
+
+                        <a href="galeria.html">
+                            <div class="franja-bg" style="background-image: url(img/paisaje-cordillerano-\ Quindio.jpg);" loading="lazy">
+                                <div class="overlay">
+                                    <h3 data-section="tarjetas" data-value="tarjetagaleria">Galería</h3>
+                                    <span class="btn-fake" data-section="explorar" data-value="btn">+ Leer más</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>   
+            </div>
+        </section>
+    </main>
+    
+     <footer>
+        <div class="container">
+            <p data-section="footer" data-value="footertexto">&copy; 2026 Colombia: Sabores y Tradiciones</p>
+        </div>
+    </footer>
+    
+    <script src="./js/menu.js"></script>
+    <script src="./js/idioma.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/mensajes_personalizado.js"></script>
+</body>
+</html>

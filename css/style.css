@@ -1,0 +1,429 @@
+/* --- ESTILOS GENERALES --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fdfdfd;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- BARRA DE NAVEGACIÓN--- */
+.header-vibrant {
+    background-color: #f1cd39;
+    padding: 12px 0;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-circle img {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 2px;
+    object-fit: cover;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+/*Menú tipo hamburguesa*/
+.abrir-menu,
+.cerrar-menu{
+    display: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover, 
+.nav-menu a.active {
+    color: #fff;
+    background-color: #3d69d4;
+    border-radius: 20px;
+}
+
+.menu-icon{
+    display: none;
+}
+
+.header-tools {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.visually-hidden{
+    position: absolute;
+    left: -9999px;
+}
+
+/*--- Mensaje Personalizado ---*/
+
+#mensaje {
+    text-align: center;
+    padding: 12px 20px; /*Agrega espacio en el elemento*/
+    font-size: 1.5rem; /*Tamaño del texto*/
+    font-weight: 600; /*Agrega grosor al texto*/
+    color:#3d69d4;
+    background-color: #f1f5ff; /*Color del fondo*/
+    border-radius: 12px; /*Redondear las esquinas del contenedor*/
+    width: fit-content;
+    max-width: 90%;
+    margin: 40px auto 40px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0, 0.1); /*Sombras suaves alrededor de los elementos*/
+    animation: aparecer 1.5s ease;
+}
+
+/*-- Breve animación --*/
+
+/*Crear animaciones personalizadas*/
+@keyframes aparecer { 
+    /*Inicio de la animación*/
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    /*Finalización de la animación*/
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* --- SECCIÓN HERO --- */
+#hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+    pointer-events: none;
+}
+.hero-texto h1 {
+    color: #3d69d4;
+    font-size: 3.2rem;
+    margin-bottom: 10px;
+}
+
+.hero-texto .autor {
+    color: #999;
+    margin-bottom: 35px;
+}
+
+.intro-texto {
+    text-align: center;
+    padding: 40px 0;
+}
+
+/*Para el slider*/.hero-imagen {
+    position: relative;
+    width: 100%; /*Ancho*/
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow:  0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    transition: transform .5s ease-in-out;
+}
+
+.slide {
+    position: relative;
+    flex: 0 0 100%;
+    min-height: 100%;
+}
+
+.slider img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    flex-shrink: 0;
+
+}
+
+/*Overlay  negro*/
+.slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/*Clase de los botones prev y next*/
+
+.prev, .next {
+    position: absolute; /*Posicionarlos sobre el slider*/
+    top: 50%; /*Permite centrar los botones de forma vertical*/
+    transform: translateY(-50%);
+    background-color: rgb(0,0,0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 6px;
+}
+
+/*Estilo individual para cada botón*/
+
+.prev {
+    left: 10px; /*Ubicación de la flecha izquierda*/
+}
+
+.next {
+    right: 10px; /*Ubicación de la flecha derecha*/
+}
+
+.hero-imagen h1{
+    color: #fff;
+}
+
+/* --- FRANJA TRICOLOR --- */
+.bandera-separator {
+    width: 100%;
+    height: 8px; 
+    background: linear-gradient(to right, #f1cd39 33.3%, #3d69d4 33.3%, #3d69d4 66.6%, #d43437 66.6%);
+    margin: 30px 0;
+}
+
+/* --- GRID DE FRANJAS --- */
+.grid-franjas {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 40px 0;
+}
+
+.titulo-seccion{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.franja-card {
+    text-decoration: none;
+    display: block;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.franja-card:hover {
+    transform: scale(1.01);
+}
+
+.franja-bg {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.45);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay h3 {
+    color: #fff;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.btn-fake {
+    background-color: #f1cd39;
+    color: #000;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/*--Responsive--*/
+@media (max-width: 850px) {
+
+       /*--Abrir menú--*/
+    .abrir-menu,
+    .cerrar-menu{
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    /*--Posición del botón--*/
+    .abrir-menu{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    /*--Ocultar menú--*/
+
+    .nav-menu{
+    opacity: 0;
+    visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 230px;
+    height: 100vh;
+
+    background-color: #e6c42f;
+    padding: 2rem;
+    padding-top: 1.5rem;
+
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+
+    transform: translateX(-100%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+
+    z-index: 2000;
+    }
+    
+    /*--Menú activo--*/
+
+    .nav-menu.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    }
+
+    /*--Configuración de la posición y el tamaño del botón de cierre--*/
+    .cerrar-menu{
+        align-self: flex-end;
+        font-size: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    /*-- Efecto de aumento de los botones al pasar el cursor*/
+    .nav-menu a:hover{
+    transform: scale(1.05);
+    }
+
+    /*--Links del menú--*/
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    /*--Header--*/
+    .header-flex {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .header-tools {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    
+    /*--Idioma--*/
+    .lang-box{
+        margin-left:auto;
+    }
+    /*Configuración del slider*/
+
+    .hero-imagen{
+        height: auto;
+        aspect-ratio: 16/ 9;
+    }
+
+    .slider img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /*--Hero--*/
+    .hero-texto h1 {
+        font-size: 1.8rem;
+    }
+
+
+    /*--Franjas tricolor--*/
+    .franja-bg {
+        height: 150px;
+    }
+
+    .overlay h3 {
+        font-size: 1.4rem;
+    }
+
+    .btn-fake {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+}

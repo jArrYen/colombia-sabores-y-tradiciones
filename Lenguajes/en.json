@@ -1,0 +1,98 @@
+{
+    "header":{
+        "inicio":"Home",
+        "gastronomia":"Gastronomy",
+        "festivales":"Festivals",
+        "galeria":"Gallery"
+    },
+
+    "hero":{
+        "herotitulo":"Colombia: Flavors and Traditions",
+        "herotexto":"Author:Jandy Arrieta Yepes"        
+    },
+
+    "bienvenida":{
+        "bienvenidatitulo":"Introduction",
+        "bienvenidatexto1":"Welcome to Colombia: Flavors and Traditions!",
+        "bienvenidatexto2":"A website where you will find traditional dishes and cultural celebrations."
+    },
+
+    "explorar":{
+        "explorartitulo":"Explore a little more!",
+        "btn":"+ Read more"
+    },
+
+     "tarjetas":{
+        "tarjetagastronomia":"Gastronomy",
+        "tarjetafestival":"Festivals",
+        "tarjetagaleria":"Gallery"
+    },
+
+    "gastronomia":{
+        "herotitulo":"Flavors by Regions",
+        "herotexto":"A journey for your taste through Colombian diversity"
+    },
+
+    "plato1":{
+        "region1":"Caribbean Region",
+        "titulo":"Fried fish with coconut rice and fried plantains",
+        "texto1":"A typical dish from the Caribbean coast. It is common in beach areas and restaurants. It is a perfect mix of sweet and salty flavors, with a good balance.",
+        "texto2":"The special color of the rice comes from panela or, in some cases, from Coca-Cola soda."
+    },
+            
+    "plato2":{
+        "region2":"Andean Region",
+        "titulo":"Bandeja paisa",
+        "texto1":"A typical dish from the coffee region and Antioquia. It includes different foods such as rice, beans, fried pork (chicharrón), sausage, avocado, and fried ripe plantains."
+    },
+    
+    "plato3":{
+        "region3":"Pacific Region",
+        "titulo":"Fish stew",
+        "texto1":"A typical dish from the Pacific region. It is made with fish, water, potatoes, plantains, cassava, tomatoes, onions, and bell pepper.",
+        "texto2":"It also includes herbs and spices like garlic, cumin, annatto, cilantro, and parsley."
+    },
+
+    "plato4":{
+        "region4":"Orinoquía Region",
+        "titulo":"Llanera-style veal",
+        "texto1":"This dish is made with veal cooked slowly over a wood fire on wooden sticks. It is served with cassava and plantain. It represents the culture of the hardworking people from the plains."
+    },
+
+    "festivales":{
+        "festivalherotitulo":"Culture and Traditions",
+        "festivalherotexto":"Discover the festivals that bring joy to every part of the country."
+    },
+
+    "evento1":{
+        "titulo":"Barranquilla Carnival",
+        "texto1":"It is a colorful and traditional festival from the Caribbean region of Colombia. It shows the culture, warmth, and diversity of the people. During the festival, people choose a queen from different neighborhoods, as well as King Momo and children’s kings and queens.",
+        "texto2":"There are many parades with floats and traditional dances such as marimonda, garabato, and monocucos. People also present “letanías,” which are part of Colombia’s oral tradition."
+    },
+
+    "evento2":{
+        "titulo":"Flower Festival",
+        "texto1":"This festival takes place in Medellín. It is popular with local people and tourists from Colombia and other countries. Visitors can see beautiful handmade works with fresh flowers. The bright colors create a very nice experience.",
+        "texto2":"This festival helps many flower growers and shows their hard and creative work. It lasts ten days."
+    },
+
+    "evento3":{
+        "titulo":"Blacks and Whites Carnival ",
+        "texto1":"It is a traditional festival that shows the cultural diversity of Colombia. It celebrates the union of indigenous, Afro-descendant, and mixed cultures. It promotes values like equality and living together in peace. During the carnival, there are parades with floats, comparsas (parade groups), and colorful costumes full of creativity.",
+        "texto2":"It also represents cultural resistance and helps preserve traditions over time. Each part of the carnival has historical and cultural meaning. This celebration strengthens the identity and pride of the communities that keep it alive."
+    },
+
+    "evento4":{
+        "titulo":"Vallenato Legend Festival",
+        "texto1":"Also called the Vallenato Festival, it takes place in Valledupar. It is a traditional festival with famous vallenato musicians and composers. Its goal is to keep this musical tradition alive and encourage children and young people to learn about it. They can learn about instruments like the accordion, guacharaca, drums, and caja, as well as rhythms like merengue, paseo, son, and puya."
+    },
+
+    "galeria":{
+        "galeriatitulo":"Our culture in images",
+        "galeriatexto":"A visual collection of the flavors, colors and traditions that make our country special."
+    },
+
+    "footer":{
+        "footertexto":"© 2026 Colombia:Flavors and Traditions"
+    }
+}

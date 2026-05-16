@@ -1,0 +1,262 @@
+/* ESTILOS GENERALES */
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fdfdfd;
+}
+
+/* Contenedor */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header-vibrant {
+    background-color: #f1cd39;
+    padding: 12px 0;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-circle img {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 2px;
+    object-fit: cover;
+}
+
+/* Navegación */
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+/*Menú tipo hamburguesa*/
+.abrir-menu,
+.cerrar-menu{
+    display: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover, 
+.nav-menu a.active {
+    color: #fff;
+    background-color: #3d69d4;
+    border-radius: 20px;
+}
+
+.header-tools {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.visually-hidden{
+    position: absolute;
+    left: -9999px;
+}
+
+/* ESTILOS DE GALERÍA */
+.galeria-intro {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.galeria-intro h1 {
+    color: #3d69d4;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.galeria-intro p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-auto-rows: 220px;
+    gap: 20px;
+    padding-bottom: 60px;
+}
+
+.galeria-item {
+    overflow: hidden;
+    border-radius: 15px;
+    border: 5px solid #fff; /* Borde blanco */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Clases para fotos destacadas */
+@media (min-width: 768px) {
+    .galeria-item.wide { grid-column: span 2; }
+    .galeria-item.tall { grid-row: span 2; }
+}
+
+/* --- Franjas tricolor--- */
+.bandera-separator {
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right, #f1cd39 33.3%, #3d69d4 33.3%, #3d69d4 66.6%, #d43437 66.6%);
+}
+
+/*---Footer---*/
+
+footer { background: #333; color: white; padding: 20px 0; text-align: center; }
+
+/* RESPONSIVE DESIGN */ 
+@media (max-width: 850px) {
+    
+    /*--Abrir menú--*/
+    .abrir-menu,
+    .cerrar-menu{
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    /*--Posición del botón--*/
+    .abrir-menu{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    /*--Ocultar menú--*/
+
+    .nav-menu{
+    opacity: 0;
+    visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 230px;
+    height: 100vh;
+
+    background-color: #e6c42f;
+    padding: 2rem;
+    padding-top: 1.5rem;
+
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+
+    transform: translateX(-100%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+
+    z-index: 2000;
+    }
+    
+    /*--Menú activo--*/
+
+    .nav-menu.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    }
+
+    /*--Configuración de la posición y el tamaño del botón de cierre--*/
+    .cerrar-menu{
+        align-self: flex-end;
+        font-size: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    /*-- Efecto de aumento de los botones al pasar el cursor*/
+    .nav-menu a:hover{
+    transform: scale(1.05);
+    }
+
+    /*--Links del menú--*/
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+    
+    /*--Header--*/
+    .header-flex {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .header-tools {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    
+    /*--Idioma--*/
+    .lang-box{
+        margin-left:auto;
+    }
+
+    /*--Galería--*/
+    .galeria-grid{
+        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+        grid-auto-rows: 180px;
+        gap: 15px;
+    }
+
+    .galeria-item img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

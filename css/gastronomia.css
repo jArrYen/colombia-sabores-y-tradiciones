@@ -1,0 +1,312 @@
+/* --- ESTILOS GENERALES --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fdfdfd;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header-vibrant {
+    background-color: #f1cd39;
+    padding: 12px 0;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-circle img {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 2px;
+    object-fit: cover;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+/*Menú tipo hamburguesa*/
+.abrir-menu,
+.cerrar-menu{
+    display: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover, 
+.nav-menu a.active {
+    color: #fff;
+    background-color: #3d69d4;
+    border-radius: 20px;
+}
+
+.header-tools {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.visually-hidden{
+    position: absolute;
+    left: -9999px;
+}
+/* --- HERO SECTION --- */
+#hero {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../img/Arepas-colombianas.jpg) center/cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-texto h1 { 
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+
+.hero-texto p { font-size: 1.2rem; }
+
+/* --- TARJETAS DE REGIONES --- */
+.regiones-container { 
+    padding: 60px 0;
+ }
+
+.plato-region {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.plato-region.inversa {
+    flex-direction: row-reverse; 
+}
+
+.plato-imagen {
+    flex: 1;
+    height: 350px; 
+}
+.plato-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.plato-info {
+    flex: 1;
+    padding: 40px; }
+
+.etiqueta-region {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* Colores de etiquetas */
+.caribe { background-color: #8fa8e8; color: #000; }
+.andina { background-color: #8fa8e8; color: #000; }
+.pacifica { background-color: #8fa8e8; color: #000; }
+.orinoquia { background-color: #8fa8e8; color: #000; }
+
+.plato-info h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin: 0 0 15px 0; 
+}
+
+.plato-info p {
+    text-align: justify;
+    line-height: 1.6;
+    color:#000; 
+}
+
+/* --- FOOTER Y DIVISORES --- */
+.bandera-separator {
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right, #f1cd39 33.3%, #3d69d4 33.3%, #3d69d4 66.6%, #d43437 66.6%);
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center; 
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 850px) {
+
+    /*--Abrir menú--*/
+    .abrir-menu,
+    .cerrar-menu{
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    /*--Posición del botón--*/
+    .abrir-menu{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    /*--Ocultar menú--*/
+
+    .nav-menu{
+    opacity: 0;
+    visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 230px;
+    height: 100vh;
+
+    background-color: #e6c42f;
+    padding: 2rem;
+    padding-top: 1.5rem;
+
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+
+    transform: translateX(-100%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+
+    z-index: 2000;
+    }
+    
+    /*--Menú activo--*/
+
+    .nav-menu.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    }
+
+    /*--Configuración de la posición y el tamaño del botón de cierre--*/
+    .cerrar-menu{
+        align-self: flex-end;
+        font-size: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    /*-- Efecto de aumento de los botones al pasar el cursor*/
+    .nav-menu a:hover{
+    transform: scale(1.05);
+    }
+
+    /*--Links del menú--*/
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+    /*--Header--*/
+    .header-flex {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .header-tools {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    
+    /*--Idioma--*/
+    .lang-box{
+        margin-left:auto;
+    }
+
+    /*--Contenido--*/
+    .plato-region, 
+    .plato-region.inversa { 
+        flex-direction: column; 
+    }
+
+    /*--Optimización de las imágenes--*/
+    .plato-imagen { 
+        aspect-ratio: 412/274;
+        width: 100%;
+    }
+
+    .plato-imagen img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .hero-texto h1{
+        font-size: 2rem;
+    }
+
+    .franja-bg {
+        height: 150px;
+    }
+
+    .overlay h3 {
+        font-size: 1.4rem;
+    }
+
+    .btn-fake {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+
+
+}
+
